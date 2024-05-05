@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Tu Tienda Virtual{% endblock %}
+
+{% block contenido %}
+    <table align="center">
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto.marca }}</td>
+            <td><a href="/producto/{{producto.id}}">{{ producto.nombre }}</a></td>
+            <td style="text-align: right;">{{ "{:,}".format(producto.precio) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

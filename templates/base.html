@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block titulo %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+  </head>
+  <body>
+    <img src=" {{ url_for('static', filename = 'imagenes/tutiendavirtual.png')}}" class="center">
+    {% block contenido %} {% endblock %}
+  </body>
+</html>
